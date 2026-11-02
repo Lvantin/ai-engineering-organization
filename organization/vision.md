@@ -1,446 +1,312 @@
-# AI Engineering Organization (AIEO)
-## Vision and Strategic Direction
+# AI Engineering Organization (AIEO) — Vision
 
-**Document:** Organization Vision  
-**Version:** 1.0.0  
-**Status:** Approved Baseline  
-**Owner:** AI Engineering Organization
-
----
+**Version:** 1.1.0  
+**Status:** Draft  
+**Last Updated:** 2026-11-02
 
 ## 1. Vision
 
-Build an AI-first software engineering organization capable of delivering high-quality software products through coordinated AI agents, standardized engineering practices, and human governance.
+Build a reusable, scalable, technology-agnostic AI Engineering Organization that can plan, design, build, test, deploy, and continuously improve software systems across different industries, architectures, platforms, programming languages, and technology stacks.
 
-AIEO aims to establish a reusable, scalable, and continuously improving engineering system that can execute most software development activities autonomously within defined boundaries while keeping humans in control of business decisions, architectural direction, quality acceptance, and critical operations.
+AIEO provides a standardized engineering organization and operating framework powered by AI Agents, while preserving human governance and accountability.
 
-The organization must operate across multiple projects, technologies, and business domains without requiring its core engineering capabilities to be redesigned for every new project.
+The organization is designed to support projects ranging from small applications to complex distributed systems consisting of multiple services, web applications, mobile applications, websites, background workers, integrations, and infrastructure components.
 
 ## 2. Mission
 
-AIEO's mission is to:
+AIEO aims to:
 
-1. Organize AI agents into a structured software engineering organization with clearly defined roles, responsibilities, and collaboration mechanisms.
-2. Standardize software development processes, engineering practices, and quality requirements across projects.
-3. Automate repetitive and well-defined engineering activities to improve productivity and consistency.
-4. Enable coordinated execution across requirements analysis, architecture, UI/UX, implementation, testing, code review, security, and deployment.
-5. Maintain project-specific flexibility while preserving organization-wide standards.
-6. Continuously improve engineering capabilities through measurable outcomes, feedback, and lessons learned.
+- Establish a reusable virtual engineering organization.
+- Standardize engineering roles, responsibilities, workflows, and quality practices.
+- Enable autonomous, coordinated execution by AI Agents within clearly defined boundaries.
+- Support different project architectures, programming languages, frameworks, and technology stacks.
+- Maintain system-level consistency across applications, services, and integrations.
+- Preserve human authority over business decisions and high-impact risks.
+- Improve engineering productivity, quality, traceability, and delivery consistency.
+- Continuously improve organizational capabilities through controlled, versioned releases.
 
 ## 3. Strategic Objectives
 
-### 3.1 Establish a Reusable Engineering Organization
+### 3.1 Reusable Engineering Organization
 
-Create a centralized set of engineering capabilities that can be reused across multiple software projects.
+Maintain a common organization model that can be reused across multiple projects without redefining the engineering organization for every project.
 
-These capabilities include:
+### 3.2 Technology Agnostic
 
-- Agent definitions and role specifications.
-- Engineering standards and guidelines.
-- Reusable skills and workflows.
-- Quality assurance and governance policies.
-- Shared tools and integrations.
-- Evaluation and improvement mechanisms.
+AIEO must not be tied to a specific programming language, framework, cloud provider, database, or deployment platform.
 
-### 3.2 Enable Multi-Project Operations
+The Organization defines stable engineering Roles. Projects declare the Skills, Capabilities, and Technology Stack required to fulfill those Roles.
 
-Support multiple projects operating concurrently under the same organization.
+### 3.3 Architecture Aware
 
-Each project should:
+AIEO must support both individual software components and complete systems.
 
-- Adopt an approved version of organization-wide capabilities.
-- Maintain its own requirements, architecture, technical decisions, and project context.
-- Configure project-specific rules and capabilities where necessary.
-- Operate independently without unintentionally sharing project data or working context with other projects.
+It must be capable of organizing engineering work across:
 
-### 3.3 Improve Software Delivery Quality
+- Monolithic applications.
+- Modular monoliths.
+- Microservices.
+- Distributed systems.
+- Event-driven architectures.
+- Web applications.
+- Mobile applications.
+- Websites and Content Management Systems.
+- Background processing systems.
+- External integrations and third-party platforms.
+- Hybrid architectures combining different technologies.
 
-Establish consistent quality controls throughout the software development lifecycle.
+Agents must understand the architectural context, responsibilities, dependencies, and interfaces relevant to their assigned work.
 
-Quality should be evaluated through:
+### 3.4 Autonomous Engineering Execution
 
-- Requirements completeness and traceability.
-- Architecture consistency and technical feasibility.
-- Code quality and maintainability.
-- Automated test coverage and test results.
-- Security and dependency assessments.
-- Deployment reliability.
-- Operational readiness.
+Agents should independently complete assigned tasks within approved permissions, responsibilities, and Quality Gates.
 
-### 3.4 Improve Engineering Productivity
+Agents must escalate when requirements are ambiguous or conflicting, a task exceeds their authority, or a significant risk is identified.
 
-Use AI agents to reduce manual effort, shorten feedback cycles, and improve coordination.
+### 3.5 Quality by Design
 
-Productivity improvements must not come at the expense of software quality, security, maintainability, or governance.
+Quality, security, reliability, maintainability, and testability must be considered throughout the project lifecycle rather than being postponed until the end.
 
-### 3.5 Build Continuous Learning and Improvement
+### 3.6 Continuous Organizational Improvement
 
-Treat every completed project as an opportunity to improve the organization.
+Engineering standards, Skills, Capabilities, workflows, and Agent definitions must evolve through controlled and versioned releases.
 
-Collect and evaluate:
+## 4. AIEO Architecture
 
-- Agent execution performance.
-- Workflow effectiveness.
-- Defect patterns and root causes.
-- Rework and review feedback.
-- Delivery time and engineering effort.
-- Quality gate failures.
-- Human intervention requirements.
-
-Use these findings to improve agent definitions, skills, workflows, and standards.
-
-## 4. Organization Architecture
-
-AIEO is structured into three logical layers.
+AIEO consists of three logical layers.
 
 ### 4.1 Organization Layer
 
-The Organization Layer defines reusable engineering capabilities and shared governance.
-
-It owns:
-
-- Organization vision and operating principles.
-- Agent definitions and role specifications.
-- Engineering standards.
-- Shared skills and workflows.
-- Quality and security policies.
-- Agent evaluation criteria.
-- Versioning and distribution mechanisms.
-
 The Organization Layer is the source of truth for reusable engineering capabilities.
+
+It defines and governs:
+
+- Organization vision and operating model.
+- Standard engineering Roles and responsibilities.
+- Reusable Skills and Capabilities.
+- Agent definitions and execution boundaries.
+- Engineering workflows and templates.
+- Quality standards and Quality Gates.
+- Security and governance policies.
+- Versioning and release management.
+
+Organization-level Roles are centrally governed. Projects cannot independently create or redefine official Roles.
 
 ### 4.2 Project Layer
 
-The Project Layer contains the context and configuration required to execute a specific software project.
+The Project Layer contains project-specific context and configuration.
 
-It owns:
+Each project defines:
 
-- Business requirements and product specifications.
-- Project architecture and technical decisions.
-- Technology stack and coding conventions.
-- Project-specific development rules.
-- Project-specific integrations and configurations.
-- Project delivery plans and milestones.
-- The selected AIEO version.
+- Business objectives and requirements.
+- System architecture and application boundaries.
+- Applications, services, components, and integrations.
+- Technology Stack for each relevant component.
+- Required Skills and Capabilities.
+- Project-specific constraints and engineering standards.
+- Delivery plan, backlog, and dependencies.
+- Selected AIEO version.
 
-A project may extend organization standards when justified, but must not silently weaken mandatory organization policies.
+Projects inherit approved Organization standards while retaining the ability to define project-specific requirements and configurations.
+
+A project may request additional organizational capabilities or Roles through the Organization governance process.
 
 ### 4.3 Runtime Layer
 
-The Runtime Layer executes engineering work using AI agent instances and supporting tools.
+The Runtime Layer executes engineering work.
 
 It includes:
 
 - Claude Code sessions.
-- Engineering Manager Agent instances.
-- Specialist Agent instances.
-- Agent teams and task coordination.
-- Development and testing execution.
-- Code review and quality validation.
-- Build and deployment operations.
+- Agent instances.
+- Agent Teams when appropriate.
+- Task execution and delegation.
+- Tool usage and permissions.
+- Development, testing, review, and delivery activities.
 
-Agent instances are created when required by the workload. They are not permanent employees or continuously running processes.
+Agent instances are created on demand based on project needs. They are not required to operate as permanent processes.
 
-Runtime execution must respect the boundaries and permissions defined by the Organization and Project Layers.
+Each Agent instance is created from an approved Organization Role and receives project-specific Skills, Capabilities, context, and permissions.
 
-## 5. Engineering Organization Principles
+## 5. Core Organization Principles
 
 ### 5.1 AI-First, Human-Governed
 
-AI agents should perform as much engineering work as reasonably possible within their assigned responsibilities and permissions.
+AI Agents perform engineering work as the primary execution workforce.
 
-Humans retain authority over:
+Humans retain authority over business direction, organizational governance, and decisions requiring human approval.
 
-- Business priorities and product direction.
-- Approval of significant architectural decisions when required by risk.
-- Acceptance of critical deliverables.
-- Production release authorization.
-- Security exceptions and risk acceptance.
-- Changes to organization-wide governance.
+### 5.2 Fixed Roles, Flexible Capabilities
 
-Human oversight follows a risk-based approval model.
+Roles are defined and governed centrally at the Organization Layer.
 
-The level of human involvement must be proportional to the potential impact, reversibility, and consequences of an activity.
+Skills and Capabilities are reusable competencies that may be assigned to Roles based on project requirements.
 
-Low-risk activities may be executed autonomously. Higher-risk activities require appropriate review or explicit human approval.
+Technology Stack is declared at the Project Layer and may vary across applications and services within the same project.
 
-AI execution does not transfer ultimate accountability away from the responsible humans.
+A Role must not be permanently bound to a specific programming language or framework unless the Role definition explicitly requires such specialization.
 
-### 5.2 Clear Roles, Responsibilities, and Accountability
+### 5.3 Technology Agnostic
 
-Every agent must have:
+The Organization must remain independent of individual technologies.
 
-- A clearly defined role.
-- Explicit responsibilities.
-- Defined inputs and expected outputs.
-- Defined collaboration relationships.
-- Explicit permissions and limitations.
-- Clear escalation conditions.
+AIEO should be able to support new programming languages, frameworks, infrastructure platforms, and architectural styles by extending its Skill and Capability catalog rather than restructuring the entire organization.
 
-Each project has an Engineering Manager Agent responsible for coordinating engineering execution.
+### 5.4 Architecture Aware
 
-The Engineering Manager Agent is responsible for:
+Engineering activities must respect system boundaries, component ownership, dependencies, and integration contracts.
 
-- Understanding project objectives and assigned work.
-- Breaking down objectives into manageable tasks.
-- Selecting and coordinating appropriate specialist agents.
-- Managing task dependencies and execution priorities.
-- Monitoring deliverables and quality requirements.
-- Identifying blockers, risks, and unresolved issues.
-- Escalating decisions beyond its authority.
-- Reporting project execution status and results.
+For multi-component and distributed systems, project architecture must be documented at system level as well as component level.
 
-Specialist agents remain accountable for the quality and completeness of their assigned deliverables.
+### 5.5 Clear Ownership and Accountability
 
-The Engineering Manager coordinates execution but does not replace independent quality assurance or human governance.
+Every significant project activity must have a clearly assigned owner.
 
-### 5.3 Autonomous, Outcome-Oriented Execution
+The Engineering Manager coordinates delivery. The Product Manager owns business priority. The Solution Architect owns technical architecture and design.
 
-Agents should be able to complete assigned tasks independently within their defined authority.
+### 5.6 Autonomous, Outcome-Oriented Execution
 
-An agent is responsible for achieving the expected outcome, not merely executing individual instructions.
+Agents may independently execute assigned work within their approved authority.
 
-For example, completing a backend development task may include:
+They are evaluated by the quality and completeness of outcomes, not merely by the number of tasks completed.
 
-1. Understanding requirements and acceptance criteria.
-2. Reviewing relevant architecture and existing code.
-3. Preparing an implementation approach.
-4. Implementing the required changes.
-5. Creating and executing appropriate tests.
-6. Resolving identified implementation issues.
-7. Validating compliance with engineering standards.
-8. Reporting completed work, test results, and outstanding issues.
+### 5.7 Separation of Concerns and Independent Validation
 
-Agents should not request unnecessary approval for routine activities already covered by their permissions and workflows.
+Implementation, code review, security assessment, and quality assurance are distinct responsibilities.
 
-However, agents must escalate when requirements are materially ambiguous, conflicting, technically infeasible, or outside their assigned authority.
+Small projects may combine multiple responsibilities in one Agent instance when appropriate, but the responsibilities and validation criteria remain distinct.
 
-### 5.4 Separation of Concerns and Independent Validation
+### 5.8 Quality by Design
 
-Separate business analysis, architecture, implementation, testing, review, and operations responsibilities.
+Every project must establish appropriate quality standards, automated checks, testing expectations, and release criteria.
 
-Agents may collaborate, but critical quality controls should not rely solely on the same agent validating its own work.
+### 5.9 Traceability and Transparency
 
-Independent validation should be applied proportionally to the risk and criticality of the deliverable.
+Requirements, architecture decisions, implementation changes, reviews, approvals, and releases must be traceable.
 
-### 5.5 Organization Standards with Project Flexibility
+### 5.10 Least Privilege and Project Isolation
 
-Organization-wide standards provide consistency.
+Agents receive only the context, tools, and permissions necessary for their assigned work.
 
-Project-specific configuration provides flexibility for different business domains, technologies, architectures, and delivery constraints.
+Projects remain isolated by default. Agents must not access other projects' source code or private context without explicit authorization.
 
-Project-specific extensions must remain compatible with mandatory organization policies.
+### 5.11 Versioned Organization and Controlled Adoption
 
-### 5.6 Quality by Design
+AIEO releases are versioned.
 
-Quality must be incorporated into every stage of the software development lifecycle.
+New projects default to the latest approved stable version.
 
-Testing, security, maintainability, and operational considerations should not be postponed until the end of development.
+Existing projects may pin their current version and are not automatically upgraded.
 
-Quality Gates must define measurable conditions that work must satisfy before progressing to designated stages.
+Projects may voluntarily upgrade after assessing compatibility, breaking changes, and migration impact.
 
-### 5.7 Traceability and Transparency
-
-Important engineering activities should produce reviewable artifacts.
-
-Examples include:
-
-- Requirements and acceptance criteria.
-- Architecture Decision Records (ADRs).
-- Implementation plans.
-- Pull requests and code changes.
-- Test reports.
-- Review findings.
-- Deployment records.
-- Risk assessments and approval records.
-
-### 5.8 Least Privilege and Project Isolation
-
-Agents should receive only the permissions and project context necessary for their assigned tasks.
-
-Projects must remain isolated by default.
-
-Cross-project access requires explicit authorization and a clearly defined business or organizational purpose.
-
-### 5.9 Versioned Organization and Controlled Adoption
-
-The Organization Layer is the single source of truth for shared engineering capabilities, standards, agent definitions, skills, and workflows.
-
-AIEO follows a versioned distribution model to ensure consistency while allowing projects to evolve independently.
-
-The following principles apply:
-
-1. **Latest Stable Version for New Projects:** New projects should adopt the latest approved stable version of AIEO by default.
-2. **Project Version Pinning:** Each project must explicitly record and maintain the AIEO version it uses.
-3. **Independent Project Evolution:** Existing projects may continue using their pinned version without being automatically upgraded when a new organization version is released.
-4. **Explicit Upgrade Decision:** Projects may voluntarily upgrade when the new version provides relevant improvements or capabilities.
-5. **Upgrade Assessment:** Before upgrading, projects should evaluate compatibility, breaking changes, migration requirements, and potential impacts on existing workflows and deliverables.
-6. **Upgrade Traceability:** Every upgrade must be recorded, including the previous version, target version, upgrade date, and relevant changes.
-7. **Security and Governance Exceptions:** When an existing version introduces unacceptable security, compliance, or operational risks, the Organization may issue a mandatory review notice. Projects must assess and resolve identified risks through an approved mitigation or upgrade plan.
-
-Organization-wide improvements must not silently change the behavior of projects using previously released versions.
-
-### 5.10 Continuous Improvement
-
-Organization standards, agents, and workflows should evolve based on evidence rather than assumptions.
-
-Changes to shared capabilities should be reviewed, versioned, tested, and communicated to projects.
-
-### 5.11 Outcome-Oriented Evaluation
-
-Agents and workflows should be evaluated based on:
-
-- Quality and completeness of deliverables.
-- Achievement of assigned objectives.
-- Compliance with engineering standards.
-- Reliability and reproducibility.
-- Efficiency and execution cost.
-- Rework and human intervention requirements.
-
-The number of tasks completed or lines of code produced must not be treated as sufficient indicators of engineering effectiveness.
+Mandatory review notices may be issued when an existing version introduces unacceptable security, compliance, or operational risks.
 
 ## 6. Scope of AIEO
 
-AIEO is intended to support the following software engineering activities:
+AIEO is designed to support the full software engineering lifecycle:
 
-1. Product and business requirements analysis.
-2. Software solution architecture and technical design.
-3. UI/UX design and frontend implementation.
-4. Backend and API development.
-5. Database design and data management.
-6. Automated testing and quality assurance.
-7. Code review and software security assessment.
-8. DevOps, CI/CD, and deployment preparation.
-9. Technical documentation.
-10. Maintenance, refactoring, and continuous improvement.
+- Product discovery and requirements analysis.
+- System architecture and solution design.
+- UX/UI design.
+- Technical planning and estimation.
+- Application and service development.
+- API and event-driven integration.
+- Database and data architecture.
+- Background processing.
+- Automated and manual testing.
+- Code review and security assessment.
+- CI/CD and infrastructure management.
+- Deployment and release management.
+- Maintenance and continuous improvement.
 
-The organization may introduce additional capabilities as its maturity increases.
+AIEO is not limited to any specific application type or technology stack.
 
 ## 7. Human Governance Model
 
-AIEO operates under human governance with risk-based oversight.
-
-Humans are responsible for defining business objectives, setting organizational policies, reviewing critical decisions, and accepting business and operational risks.
-
-AI agents may independently execute authorized tasks within their defined boundaries.
-
-Activities should be classified according to their risk and potential impact.
+Human oversight follows a risk-based approval model.
 
 ### 7.1 Low-Risk Activities
 
 Examples:
 
-- Drafting and updating technical documentation.
-- Analyzing requirements.
-- Implementing routine code changes in authorized development environments.
-- Creating and running automated tests.
-- Performing static code analysis.
-- Preparing technical recommendations.
+- Documentation updates.
+- Routine code implementation within approved requirements.
+- Unit tests.
+- Non-production refactoring.
+- Local development configuration.
 
-These activities may be executed autonomously within established permissions and Quality Gates.
+Agents may execute these activities independently within their permissions and Quality Gates.
 
 ### 7.2 Medium-Risk Activities
 
 Examples:
 
-- Significant application architecture changes.
-- Database schema modifications.
-- Changes to public API contracts.
-- Introduction of new dependencies or infrastructure components.
-- Changes affecting multiple modules or integrations.
+- Changes to shared APIs.
+- Database schema changes.
+- Changes affecting multiple services.
+- Changes to authentication or authorization behavior.
+- Changes to deployment configuration.
 
-These activities require appropriate technical review, validation, and approval according to the project's governance rules.
-
-Agents may perform the work when authorized, but must satisfy the applicable review and Quality Gates.
+These activities require appropriate technical review and approval according to project policy.
 
 ### 7.3 High-Risk Activities
 
 Examples:
 
-- Production deployment requiring release authorization.
-- Destructive operations affecting important data or infrastructure.
-- Changes to security policies or access permissions.
-- Acceptance of significant security or compliance risks.
-- Changes to mandatory organization governance.
-- Decisions with significant business, financial, or legal consequences.
+- Production data migration.
+- Significant security architecture changes.
+- Changes with major availability or business continuity impact.
+- Production release with significant operational risk.
+- Changes affecting regulatory or contractual obligations.
 
-These activities require explicit human authorization before execution or acceptance, as applicable.
-
-### 7.4 Risk Escalation
-
-When an agent cannot confidently classify an activity, encounters an unexpected high-impact consequence, or identifies a conflict between requirements and governance policies, it must escalate the issue to the appropriate human authority.
-
-No agent may bypass mandatory approval requirements by reclassifying an activity without justification.
+Human approval is required before execution or release, according to the applicable governance policy.
 
 ## 8. Success Metrics
 
-AIEO performance should be measured through a balanced set of indicators.
+AIEO effectiveness should be evaluated using measurable outcomes, including:
 
-### 8.1 Delivery Performance
-
-- Lead time from approved requirements to delivery.
-- Cycle time for development tasks.
 - Delivery predictability.
-- Work completed per delivery period.
+- Engineering throughput.
+- Defect rate and escaped defects.
+- Automated test coverage and effectiveness.
+- Security findings and remediation time.
+- Change failure rate.
+- Recovery time.
+- Maintainability and technical debt.
+- Reusability of Organization capabilities.
+- Cost and efficiency of Agent execution.
 
-### 8.2 Software Quality
-
-- Defect rate and defect severity.
-- Escaped defects after release.
-- Automated test reliability.
-- Code review findings.
-- Rework rate.
-- Production incident frequency.
-
-### 8.3 Agent Effectiveness
-
-- Task completion rate.
-- First-pass acceptance rate.
-- Human intervention frequency.
-- Agent execution cost per accepted deliverable.
-- Repeated failure patterns.
-- Compliance with assigned responsibilities and permissions.
-
-### 8.4 Organization Reusability
-
-- Percentage of shared capabilities reused across projects.
-- Time required to onboard a new project.
-- Effort required to maintain organization-wide standards.
-- Adoption rate of approved organization updates.
-
-Metrics should be interpreted together. Optimizing delivery speed alone is not considered a successful outcome if quality or security deteriorates.
+Metrics must be interpreted in project context rather than optimized in isolation.
 
 ## 9. Non-Goals
 
 AIEO is not intended to:
 
-- Eliminate human accountability.
-- Allow unrestricted autonomous access to production systems.
-- Force every project to use an identical technology stack.
-- Duplicate organization-wide standards in every project.
-- Maximize the number of agents regardless of actual value.
-- Treat agent output as correct without appropriate verification.
-- Optimize development speed at the expense of maintainability and security.
-- Automatically upgrade projects whenever a new AIEO version is released.
-- Allow agents to bypass defined permissions, approval requirements, or Quality Gates.
+- Replace human business ownership and accountability.
+- Force every project to use the same technology stack.
+- Require every project to adopt microservices or a specific architecture.
+- Create a permanent Agent process for every Role.
+- Allow projects to silently modify Organization-level standards.
+- Maximize Agent autonomy without considering risk.
+- Treat the number of Agents or completed tasks as the primary measure of success.
 
 ## 10. Evolution Strategy
 
-AIEO will evolve incrementally.
+AIEO evolves through versioned releases.
 
-The initial implementation should prioritize:
+Organizational improvements may include:
 
-1. A stable organization structure.
-2. A small set of clearly defined core agents.
-3. Standardized development workflows.
-4. Reliable quality gates.
-5. A repeatable project onboarding process.
-6. Versioned distribution and project version management.
-7. Measurable evaluation of agent and workflow effectiveness.
+- New or revised Roles.
+- New Skills and Capabilities.
+- Improved Agent instructions.
+- New engineering workflows.
+- Updated quality and security standards.
+- Improved governance and execution mechanisms.
 
-Advanced capabilities such as multi-agent autonomous coordination, extensive MCP integrations, automated organizational evaluation, and sophisticated orchestration should be introduced only when justified by actual project experience.
+Changes must be reviewed, documented, and released through the Organization governance process.
 
-The organization should be validated through real pilot projects before being considered mature.
+Projects must be able to identify the AIEO version they use and understand the impact of upgrading.
 
 ---
 

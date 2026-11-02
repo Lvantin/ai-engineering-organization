@@ -1,826 +1,597 @@
-# AI Engineering Organization (AIEO)
-## Operating Model
+# AI Engineering Organization (AIEO) — Operating Model
 
-**Document:** Organization Operating Model  
-**Version:** 1.0.0  
-**Status:** Approved Baseline  
-**Owner:** AI Engineering Organization
-
----
+**Version:** 1.1.0  
+**Status:** Draft  
+**Last Updated:** 2026-11-02
 
 ## 1. Purpose
 
-This document defines how AIEO operates, coordinates AI agents, manages software engineering activities, and delivers software products across one or multiple projects.
+This document defines how AIEO operates across projects, including organizational structure, Role governance, project configuration, Agent execution, engineering workflows, collaboration, quality management, and human oversight.
 
-It establishes a consistent operating model for:
-
-- Project execution.
-- Agent organization and collaboration.
-- Work planning and delegation.
-- Deliverable management.
-- Quality assurance.
-- Human oversight and escalation.
-- Multi-project operations.
-- Continuous improvement.
-
-This document translates the organizational vision into practical operating principles and workflows.
+It establishes a consistent operating model while allowing each project to choose its architecture, Skills, Capabilities, and Technology Stack.
 
 ## 2. Operating Model Overview
 
-AIEO operates as a virtual software engineering organization composed of specialized AI agent roles coordinated through an Engineering Manager.
-
-The organization uses three operating layers.
+AIEO operates through three layers.
 
 ### 2.1 Organization Layer
 
-Provides shared capabilities and governance:
+Responsible for:
 
-- Organization-wide agent definitions.
-- Engineering standards.
-- Reusable skills and workflows.
-- Quality and security policies.
-- Shared tools and integrations.
-- Versioned releases.
-- Approved agent role catalog.
+- Defining and governing Roles.
+- Maintaining reusable Skills and Capabilities.
+- Defining Agent behavior and permissions.
+- Publishing engineering standards and workflows.
+- Managing Quality Gates and governance policies.
+- Releasing versioned Organization capabilities.
 
 ### 2.2 Project Layer
 
-Provides project-specific context:
+Responsible for:
 
-- Business objectives and requirements.
-- Product scope and priorities.
-- Technical architecture.
-- Technology stack.
-- Project-specific standards.
-- Delivery plans and milestones.
-- Selected AIEO version.
+- Defining project objectives and requirements.
+- Describing system architecture and components.
+- Declaring Technology Stack.
+- Selecting required Skills and Capabilities.
+- Configuring project-specific workflows and constraints.
+- Pinning the AIEO version.
+- Managing project backlog and delivery.
 
 ### 2.3 Runtime Layer
 
-Executes project work through:
+Responsible for:
 
-- Engineering Manager sessions.
-- Specialist agent instances.
-- Task coordination.
-- Development and testing tools.
-- Quality validation.
-- Build and deployment processes.
-
-Each project operates in its own isolated context and execution environment.
+- Creating Agent instances.
+- Assigning work.
+- Executing tasks.
+- Coordinating parallel activities.
+- Performing reviews and testing.
+- Producing engineering deliverables.
 
 ## 3. Organization Structure
 
 ### 3.1 Human Project Owner
 
-The Human Project Owner represents the business ownership and decision-making authority for a project.
+Owns business direction, project objectives, and decisions requiring human authority.
 
 Responsibilities:
 
-- Define business objectives.
-- Establish business priorities and scope.
-- Provide business context and constraints.
-- Resolve business-level ambiguities.
-- Approve decisions requiring human authorization.
-- Accept business deliverables.
-- Authorize high-risk activities where applicable.
-
-The Project Owner does not need to manage individual technical tasks directly.
+- Define or approve business objectives.
+- Resolve business-level conflicts.
+- Approve high-impact decisions.
+- Review project outcomes.
+- Provide business acceptance.
 
 ### 3.2 Engineering Manager Agent
 
-The Engineering Manager Agent is the primary coordination role within each project.
+The primary project execution coordinator.
 
 Responsibilities:
 
-- Receive objectives and work requests.
-- Understand project context and constraints.
-- Coordinate work planning with the Product Manager and Solution Architect.
-- Break down approved objectives into manageable work items.
-- Assign appropriate specialist agents.
-- Manage execution priorities and task dependencies.
+- Coordinate the project engineering workflow.
+- Work with Product Manager to translate priorities into executable work.
+- Manage execution priority and dependencies.
+- Decompose work into tasks.
+- Assign tasks to approved Roles.
+- Instantiate Agent instances when needed.
 - Coordinate parallel execution.
-- Track progress and deliverable status.
-- Monitor quality requirements.
-- Identify risks and blockers.
-- Escalate decisions beyond its authority.
-- Consolidate results and report project status.
+- Monitor progress, risks, and Quality Gates.
+- Escalate issues requiring human or specialist decisions.
+- Ensure engineering deliverables are complete and traceable.
 
-The Engineering Manager is accountable for execution coordination and delivery visibility.
+The Engineering Manager does not override the Product Manager's business priority ownership or the Solution Architect's technical architecture ownership.
 
-The Engineering Manager does not own business priorities or replace the technical authority of the Solution Architect.
+The Engineering Manager may instantiate only Roles approved and defined by the Organization.
 
 ### 3.3 Product Manager Agent
 
-The Product Manager Agent owns product requirements and business-level prioritization.
+Owns business requirements and business priority.
 
 Responsibilities:
 
-- Analyze business needs.
-- Define and maintain product scope.
-- Prepare requirements and specifications.
-- Define user stories and acceptance criteria.
+- Gather and clarify requirements.
 - Maintain the product backlog.
-- Manage business priorities.
-- Clarify business rules and expected outcomes.
-- Coordinate requirement clarification with the Human Project Owner.
-- Evaluate proposed scope changes from a product perspective.
+- Define business value and acceptance criteria.
+- Prioritize backlog items.
+- Coordinate business validation.
+- Manage requirement changes.
 
-The Product Manager determines what should be built and why.
-
-Business priority changes that materially affect approved objectives, budget, or scope must be escalated to the Human Project Owner.
+The Product Manager owns business priority. The Engineering Manager owns execution priority, task sequencing, and technical dependencies.
 
 ### 3.4 Solution Architect Agent
 
-The Solution Architect Agent owns solution architecture and technical design.
+Owns technical architecture and solution design.
 
 Responsibilities:
 
-- Analyze technical requirements and constraints.
+- Understand business and non-functional requirements.
 - Define system architecture.
-- Establish module and service boundaries.
-- Define data models and integration patterns.
-- Define API contracts and technical interfaces.
-- Recommend technology choices.
-- Evaluate technical feasibility and trade-offs.
-- Identify security, performance, scalability, and maintainability considerations.
-- Review significant technical changes.
-- Maintain Architecture Decision Records (ADRs).
+- Identify application and service boundaries.
+- Define integration patterns and contracts.
+- Define data ownership and architectural constraints.
+- Evaluate technical alternatives.
+- Maintain Architecture Decision Records.
+- Review architecture-impacting changes.
+- Coordinate cross-component technical consistency.
 
-The Solution Architect is responsible for technical design decisions within the approved project constraints and assigned authority.
+The Solution Architect may delegate detailed design activities but retains ownership of architectural coherence.
 
-Significant architectural decisions must follow risk-based review and approval requirements.
+Significant architecture decisions are subject to risk-based approval.
 
-### 3.5 Specialist Agents
+### 3.5 Specialist Engineering Roles
 
-Specialist agents perform engineering activities within their assigned responsibilities.
+Specialist Roles execute engineering work within their defined responsibilities.
 
-The initial organization includes:
+The Organization maintains the official Role catalog. Projects select the Roles they need and assign project-specific Skills and Capabilities.
 
-| Agent Role | Primary Responsibilities |
-|---|---|
-| UI/UX Designer | User flows, interaction design, interface specifications |
-| Backend Engineer | APIs, business logic, data access, backend implementation |
-| Frontend Engineer | User interfaces, frontend architecture, client-side implementation |
-| QA Engineer | Test strategy, test cases, automated and manual validation |
-| Code Reviewer / Security Engineer | Code quality, security review, maintainability |
-| DevOps Engineer | CI/CD, build, deployment, infrastructure configuration |
-
-The organization may introduce additional specialist roles through its governance and version release process.
-
-Not every task requires every specialist agent.
+The initial Role catalog is defined in `roles-and-responsibilities.md`.
 
 ### 3.6 Human Governance
 
-Humans retain authority over decisions and activities requiring human judgment or explicit approval.
+Human involvement is determined by risk and authority.
 
-The required level of oversight is determined by risk, impact, reversibility, and applicable governance policies.
+Humans retain approval authority for high-impact business, security, compliance, and operational decisions.
 
-## 4. Project Lifecycle
+## 4. Role, Skill, Capability, and Technology Stack Model
 
-AIEO follows a standard software delivery lifecycle.
+### 4.1 Role
 
-Projects may tailor the sequence according to their development methodology, but mandatory governance and quality requirements must remain satisfied.
+A Role defines a stable organizational responsibility.
 
-### 4.1 Project Initiation
-
-Objective:
-
-Establish the project context and execution foundation.
-
-Activities:
-
-- Understand business objectives.
-- Identify stakeholders and users.
-- Define project scope and constraints.
-- Identify technology and operational constraints.
-- Establish initial business priorities.
-- Select and record the AIEO version.
-- Establish the project repository and documentation structure.
-
-Primary roles:
-
-- Human Project Owner.
-- Engineering Manager Agent.
-- Product Manager.
-- Solution Architect, when required.
-
-Expected deliverables:
-
-- Project overview.
-- Initial scope.
-- Stakeholder information.
-- Initial assumptions and constraints.
-- Project configuration.
-- Initial delivery roadmap.
-
-### 4.2 Requirements Analysis
-
-Objective:
-
-Produce clear, consistent, and verifiable requirements.
-
-Activities:
-
-- Analyze business needs.
-- Identify functional requirements.
-- Identify non-functional requirements.
-- Define business rules.
-- Identify user roles and permissions.
-- Define use cases and user journeys.
-- Establish acceptance criteria.
-- Identify dependencies and unresolved questions.
-- Detect requirement conflicts and ambiguities.
-
-Primary roles:
-
-- Product Manager.
-- Engineering Manager Agent.
-- Human Project Owner, when business clarification is required.
-
-Expected deliverables:
-
-- Product Requirements Document (PRD).
-- Functional specifications.
-- Non-functional requirements.
-- User stories and acceptance criteria.
-- Business rules.
-- Requirements traceability information.
-- Open questions and assumptions.
-
-Quality Gate:
-
-Requirements must be sufficiently clear, consistent, traceable, and verifiable before dependent implementation work is authorized.
-
-### 4.3 Solution Architecture and Design
-
-Objective:
-
-Define a technically feasible and maintainable solution.
-
-Activities:
-
-- Review requirements and constraints.
-- Define system architecture.
-- Identify modules and service boundaries.
-- Define data models and database structures.
-- Define API contracts and integration interfaces.
-- Establish technology choices.
-- Identify security and performance considerations.
-- Define UI/UX specifications where applicable.
-- Record significant technical decisions.
-
-Primary roles:
-
-- Solution Architect.
-- UI/UX Designer.
-- Engineering Manager Agent.
-- Backend and Frontend Engineers for technical consultation.
-
-Expected deliverables:
-
-- Solution Architecture Document.
-- Architecture diagrams.
-- Architecture Decision Records (ADRs).
-- Database design.
-- API specifications.
-- UI/UX specifications.
-- Security and integration considerations.
-
-Quality Gate:
-
-The proposed solution must be technically feasible, consistent with approved requirements, and reviewed according to the risk of architectural decisions.
-
-The Solution Architect owns technical design. The Engineering Manager coordinates the decision process and ensures required approvals are obtained.
-
-### 4.4 Implementation Planning
-
-Objective:
-
-Convert approved requirements and architecture into executable work.
-
-Activities:
-
-- Maintain alignment with the Product Manager's business priorities.
-- Break down work into Epics, Stories, and Tasks.
-- Identify dependencies.
-- Estimate complexity and effort where appropriate.
-- Define execution sequence.
-- Identify parallelizable tasks.
-- Assign responsibilities.
-- Define acceptance criteria and required tests.
-- Identify delivery risks.
-
-Primary roles:
-
-- Engineering Manager Agent.
-- Product Manager.
-- Solution Architect.
-- Specialist agents as required.
-
-Expected deliverables:
-
-- Product backlog.
-- Work breakdown structure.
-- Task descriptions.
-- Dependency map.
-- Execution plan.
-- Agent assignments.
-- Milestones and progress criteria.
-
-Quality Gate:
-
-Tasks must have sufficient context, clear expected outputs, and identifiable completion criteria before execution.
-
-### 4.5 Development and Implementation
-
-Objective:
-
-Implement the approved solution.
-
-Activities:
-
-- Prepare implementation plans for assigned tasks.
-- Develop backend and frontend components.
-- Implement database changes.
-- Implement integrations.
-- Write automated tests.
-- Update technical documentation.
-- Perform local validation.
-- Report implementation results.
-
-Primary roles:
+Examples:
 
 - Backend Engineer.
 - Frontend Engineer.
-- Other specialist agents as required.
-- Engineering Manager Agent.
-
-Expected deliverables:
-
-- Source code changes.
-- Database migration scripts where applicable.
-- Automated tests.
-- Updated technical documentation.
-- Implementation reports.
-- Identified limitations and outstanding issues.
-
-Quality Gate:
-
-Every code change must pass applicable automated checks, including the required build, tests, and static validation.
-
-Additional independent code review is required according to risk classification and project governance.
-
-### 4.6 Quality Assurance and Review
-
-Objective:
-
-Independently validate implementation quality and readiness.
-
-Activities:
-
-- Review requirements traceability.
-- Execute automated tests.
-- Perform integration and functional testing.
-- Validate edge cases.
-- Review code quality and maintainability according to risk.
-- Perform security assessments.
-- Validate error handling and logging.
-- Report defects and risks.
-- Verify defect fixes.
-
-Primary roles:
-
+- Mobile Engineer.
 - QA Engineer.
-- Code Reviewer / Security Engineer.
-- Backend and Frontend Engineers for remediation.
-- Engineering Manager Agent for coordination.
+- Security Engineer.
 
-Expected deliverables:
+Roles are defined and governed by the Organization.
 
-- Test plans and test cases.
-- Test execution reports.
-- Defect reports.
-- Code review findings.
-- Security findings.
-- Quality assessment.
-- Release readiness recommendation.
+Projects cannot independently create, rename, or redefine official Organization Roles.
 
-Quality Gate:
+### 4.2 Skill
 
-All mandatory tests and automated checks must pass.
+A Skill represents a specific technical or professional competency.
 
-Required independent reviews must be completed.
+Examples:
 
-Outstanding findings must be resolved or explicitly accepted by an authorized human decision-maker according to risk policy.
+- C#.
+- Java.
+- Python.
+- React.
+- Flutter.
+- WordPress.
+- PostgreSQL.
+- RabbitMQ.
+- Kubernetes.
 
-### 4.7 Release and Deployment
+Skills may be reused across multiple Roles when relevant.
 
-Objective:
+### 4.3 Capability
 
-Prepare and deliver a validated software release.
+A Capability represents the ability to perform a broader engineering activity or solve a particular class of problems.
 
-Activities:
+Examples:
 
-- Prepare build artifacts.
-- Validate deployment configuration.
-- Verify environment-specific settings.
-- Prepare database migration procedures.
-- Prepare rollback or recovery procedures.
-- Verify operational readiness.
-- Obtain required release authorization.
-- Execute authorized deployment.
-- Validate deployment results.
+- REST API Development.
+- Event-Driven Architecture.
+- Distributed Systems Design.
+- Database Optimization.
+- Mobile Application Development.
+- Contract Testing.
+- Threat Modeling.
+- CI/CD Pipeline Design.
 
-Primary roles:
+Capabilities may consist of multiple Skills and may be assigned to different Roles according to responsibility.
 
-- DevOps Engineer.
-- QA Engineer.
-- Engineering Manager Agent.
-- Human Project Owner or authorized release approver.
+### 4.4 Technology Stack
 
-Expected deliverables:
+Technology Stack is declared at Project Layer.
 
-- Release package.
-- Build and deployment records.
-- Release notes.
-- Migration procedures.
-- Rollback or recovery plan.
-- Deployment verification report.
+A project may define different technologies for different applications, services, or components.
 
-Quality Gate:
+For example:
 
-Release requirements must be satisfied, and activities requiring explicit human authorization must receive approval before execution.
+| Component | Technology Stack |
+|---|---|
+| Mobile App | Flutter |
+| Web App | React |
+| API Gateway | .NET |
+| Order Service | Java |
+| Notification Service | Python |
+| Website | WordPress / PHP |
+| Database | PostgreSQL |
+| Message Broker | RabbitMQ |
+| Infrastructure | Docker / Kubernetes |
 
-### 4.8 Maintenance and Continuous Improvement
+AIEO must not assume that all components in one project use the same language or framework.
 
-Objective:
+### 4.5 Agent Instantiation
 
-Maintain software quality and improve the product after release.
+An Agent instance is created from an approved Role.
 
-Activities:
+The project assigns the Agent:
 
-- Analyze defects and incidents.
-- Prioritize maintenance requests.
-- Implement bug fixes.
-- Perform refactoring.
-- Improve performance and security.
-- Update technical documentation.
-- Evaluate delivery and quality metrics.
-- Collect lessons learned.
+- Project context.
+- Relevant Skills.
+- Required Capabilities.
+- Technology Stack context.
+- Task scope.
+- Permissions.
+- Expected deliverables.
+- Applicable Quality Gates.
 
-Primary roles:
+An Agent instance may hold multiple approved Skills and Capabilities.
 
-- Engineering Manager Agent.
-- Product Manager for business prioritization.
-- Relevant specialist agents.
-- Human Project Owner for business decisions.
+One Agent instance may perform more than one Role in small projects when explicitly permitted. However, Role responsibilities and review criteria remain distinct.
 
-Expected deliverables:
+## 5. Project Architecture and System Context
 
-- Defect and incident reports.
-- Maintenance releases.
-- Improvement proposals.
-- Updated documentation.
-- Lessons learned.
-- Engineering performance metrics.
+Projects must describe their architecture at a level appropriate to their complexity.
 
-## 5. Work Management and Delegation
+### 5.1 Architecture Classification
 
-### 5.1 Work Intake
+The Solution Architect identifies the architecture style and relevant boundaries, which may include:
 
-All engineering work should enter through a defined work intake process.
+- Monolithic.
+- Modular monolith.
+- Microservices.
+- Distributed systems.
+- Event-driven.
+- Serverless.
+- Hybrid architectures.
 
-Typical work requests include:
+AIEO does not mandate a particular architecture style.
 
-- New features.
-- Change requests.
-- Bug fixes.
-- Technical improvements.
-- Refactoring.
-- Security remediation.
-- Infrastructure and deployment changes.
+### 5.2 System-Level Architecture Artifacts
 
-The Engineering Manager coordinates the initial assessment with the Product Manager and relevant technical specialists.
+For projects involving multiple applications, services, or independently deployed components, the following artifacts should be maintained as applicable:
 
-### 5.2 Backlog Ownership and Prioritization
+| Artifact | Purpose |
+|---|---|
+| System Context Diagram | Defines system boundaries and external actors/systems |
+| Component Diagram | Describes applications, services, and major components |
+| Service Catalog | Defines each service's responsibility and ownership |
+| Dependency Map | Identifies dependencies and communication relationships |
+| API / Event Contracts | Defines communication contracts |
+| Data Ownership Map | Identifies authoritative data ownership |
+| Architecture Decision Records | Captures significant technical decisions |
+| Deployment Architecture | Describes deployment topology |
+| NFR Specification | Defines performance, availability, scalability, and reliability needs |
+| Security Architecture | Describes trust boundaries and security controls |
 
-Product and execution priorities are separate responsibilities.
+The Solution Architect owns the architectural consistency of these artifacts.
 
-**Product Manager owns business priority:**
+### 5.3 Component Ownership
 
-- Product value.
-- Business urgency.
-- User impact.
-- Feature importance.
-- Scope and product sequencing.
+Every major application, service, or component must have a clear functional responsibility.
 
-**Engineering Manager owns execution priority:**
+The project must identify:
 
-- Technical dependencies.
-- Implementation sequence.
-- Resource and agent allocation.
-- Execution feasibility.
-- Parallelization opportunities.
-- Delivery coordination.
+- What the component owns.
+- What it does not own.
+- Which data it is authoritative for.
+- Which components it depends on.
+- Which interfaces it exposes.
+- Which interfaces it consumes.
 
-The Engineering Manager should normally align execution planning with the Product Manager's business priorities.
+### 5.4 Integration Contracts
 
-When technical constraints require a different execution sequence, the Engineering Manager explains the impact and coordinates an appropriate decision with the Product Manager.
+Components that communicate must have agreed contracts.
 
-Changes that materially alter business objectives, approved scope, or significant commitments must be escalated to the Human Project Owner.
+Contracts may include:
 
-### 5.3 Task Decomposition
+- REST or GraphQL API specifications.
+- Message/event schemas.
+- Webhook specifications.
+- Data exchange formats.
+- Authentication and authorization requirements.
+- Error handling and retry behavior.
+- Compatibility and versioning rules.
 
-The Engineering Manager decomposes approved work into tasks that have:
+Contract changes must be assessed for backward compatibility and impact on dependent components.
 
-- A clear objective.
-- Sufficient input context.
-- Defined expected outputs.
+### 5.5 Data Ownership
+
+Projects must avoid ambiguous ownership of business data.
+
+The authoritative owner of each important data domain must be identified.
+
+Cross-service data synchronization, eventual consistency, transaction boundaries, and failure recovery must be considered where relevant.
+
+## 6. Project Lifecycle
+
+### 6.1 Project Initiation
+
+The project owner defines business objectives and initial scope.
+
+Engineering Manager coordinates project setup.
+
+Required initial outputs may include:
+
+- Project charter or overview.
+- Initial requirements.
+- Stakeholder information.
+- Initial constraints.
+- Project configuration.
+- Selected AIEO version.
+
+### 6.2 Requirements Analysis
+
+Product Manager analyzes and structures requirements.
+
+Outputs include:
+
+- Functional requirements.
+- Non-functional requirements.
+- User journeys.
 - Acceptance criteria.
-- Assigned responsibilities.
-- Known dependencies.
-- Applicable permissions and risk classification.
+- Initial backlog.
+- Business priorities.
 
-Tasks should be sufficiently independent to enable efficient execution without creating unnecessary coordination overhead.
+### 6.3 Solution Architecture and Design
 
-### 5.4 Agent Assignment and Authorization
+Solution Architect defines the technical solution.
 
-The Engineering Manager selects agents based on:
+Outputs depend on project complexity and may include:
 
-- Required expertise.
-- Task complexity.
-- Project technology.
+- Architecture diagrams.
+- Application and service boundaries.
+- Technology Stack decisions.
+- Integration contracts.
+- Data ownership.
+- Security architecture.
+- Architecture Decision Records.
+
+### 6.4 Implementation Planning
+
+Engineering Manager coordinates task decomposition and execution planning.
+
+Tasks must identify:
+
+- Objective.
+- Scope.
 - Dependencies.
-- Risk level.
-- Available execution capacity.
+- Responsible Role.
+- Required Skills and Capabilities.
+- Technology context.
+- Expected deliverables.
+- Acceptance criteria.
+- Quality Gates.
 
-Only agent roles approved and defined by the Organization may be instantiated.
+### 6.5 Development and Implementation
 
-The Engineering Manager may choose from the approved role catalog but must not independently create or authorize new agent roles.
+Engineering Agents execute assigned tasks.
 
-New roles must be proposed, reviewed, and approved through the Organization governance and release process.
+Parallel execution is allowed when dependencies and interfaces are sufficiently defined.
 
-### 5.5 Parallel Execution
+For cross-component work, relevant contracts and ownership must be established before parallel implementation.
 
-Independent tasks may execute in parallel.
+### 6.6 QA and Review
 
-Tasks with dependencies must follow an appropriate execution sequence.
+Quality validation includes applicable levels:
 
-Before parallelizing implementation work, the Engineering Manager should identify potential conflicts involving:
+- Unit testing.
+- Component testing.
+- API and contract testing.
+- Integration testing.
+- End-to-end testing.
+- Performance testing.
+- Security testing.
+- Regression testing.
 
-- Shared files.
-- Database schemas.
-- API contracts.
-- Common components.
-- Configuration.
-- Integration interfaces.
+Every code change must pass required automated checks.
 
-Conflicting changes must be coordinated to avoid inconsistent implementations and merge conflicts.
+Code Review and Security Review are distinct responsibilities. Review depth is determined by risk.
 
-### 5.6 Task Completion
+### 6.7 Release and Deployment
+
+DevOps Engineer coordinates deployment activities.
+
+Release must satisfy applicable Quality Gates and approval requirements.
+
+High-risk production changes require human approval.
+
+### 6.8 Maintenance and Continuous Improvement
+
+The team monitors system behavior, resolves defects, addresses technical debt, and improves engineering practices.
+
+Lessons learned may be proposed for inclusion in reusable Organization capabilities.
+
+## 7. Work Management and Delegation
+
+### 7.1 Work Intake
+
+Work may originate from:
+
+- Product backlog.
+- Defects.
+- Technical debt.
+- Security findings.
+- Operational incidents.
+- Architecture improvements.
+- Compliance requirements.
+
+### 7.2 Prioritization Ownership
+
+- Product Manager owns business priority.
+- Engineering Manager owns execution priority, sequencing, and dependencies.
+- Solution Architect owns technical design decisions.
+- Human Project Owner resolves business conflicts and approves decisions requiring human authority.
+
+### 7.3 Task Decomposition
+
+Engineering Manager decomposes backlog items into executable tasks.
+
+Tasks should be sufficiently independent to allow parallel execution without creating unnecessary integration risk.
+
+### 7.4 Role Assignment
+
+Engineering Manager selects from Organization-approved Roles.
+
+The project provides the required Skills, Capabilities, and Technology Stack context.
+
+If a required Role does not exist, the Engineering Manager must raise a proposal to Organization governance rather than inventing a new official Role.
+
+### 7.5 Parallel Execution
+
+Parallel execution is encouraged when:
+
+- Task boundaries are clear.
+- Dependencies are understood.
+- Integration contracts are available.
+- Shared resources and files are managed safely.
+- Conflicting changes are controlled.
+
+### 7.6 Task Completion
 
 A task is complete only when:
 
-- Expected deliverables are available.
-- Acceptance criteria are satisfied.
-- Required automated checks have passed.
-- Required reviews and validations are completed.
-- Relevant documentation is updated.
-- Known issues and limitations are reported.
-- Required approvals are obtained.
+- Required deliverables exist.
+- Acceptance criteria are met.
+- Required automated checks pass.
+- Required reviews are complete.
+- Documentation is updated where applicable.
+- Dependencies and follow-up work are recorded.
 
-The Engineering Manager validates completion status before closing the work item.
+## 8. Agent Collaboration and Communication
 
-## 6. Agent Collaboration and Communication
+Agents collaborate through explicit task assignments and shared project artifacts.
 
-### 6.1 Primary Coordination
+The Engineering Manager coordinates work and resolves execution conflicts.
 
-The Engineering Manager is the primary coordination point for project execution.
+The Solution Architect coordinates architecture-related collaboration.
 
-Specialist agents report their progress, deliverables, blockers, and findings to the Engineering Manager.
+Product Manager clarifies business requirements.
 
-The Product Manager remains the authority for product requirements and business priorities.
+Specialist Agents communicate relevant technical findings and escalate conflicts.
 
-The Solution Architect remains the authority for technical design within the approved decision boundaries.
+Agents must not silently make decisions that change another component's contract, ownership, or behavior without appropriate coordination.
 
-### 6.2 Direct Collaboration
+## 9. Quality Management
 
-Direct agent-to-agent collaboration may be used when it improves execution efficiency.
+### 9.1 Automated Quality Checks
 
-Examples:
-
-- Backend Engineer consulting Solution Architect about API design.
-- Frontend Engineer coordinating API contracts with Backend Engineer.
-- QA Engineer discussing test failures with implementation agents.
-- Code Reviewer providing findings directly to the responsible developer.
-
-Direct collaboration must not bypass project governance or obscure task ownership.
-
-### 6.3 Communication Artifacts
-
-Important decisions and execution outcomes should be recorded in durable project artifacts.
+Every code change must pass the project's required automated checks.
 
 Examples:
 
-- Task records.
-- Architecture Decision Records.
-- Technical specifications.
-- Pull requests.
-- Test reports.
-- Review reports.
-- Risk and issue logs.
+- Build and compilation.
+- Unit tests.
+- Static analysis.
+- Linting and formatting.
+- Dependency vulnerability checks.
+- Secret scanning.
+- Contract tests.
+- Integration tests.
 
-Critical decisions must not exist only in temporary agent conversation context.
+The exact checks depend on project technology and risk.
 
-## 7. Deliverable and Knowledge Management
+### 9.2 Code Review
 
-### 7.1 Source of Truth
+Code Reviewer assesses:
 
-Each project must define authoritative locations for:
+- Correctness.
+- Maintainability.
+- Readability.
+- Design consistency.
+- Error handling.
+- Test quality.
+- Potential regressions.
 
-- Requirements.
-- Architecture documentation.
-- Technical decisions.
-- Source code.
-- Tests.
-- Work items.
-- Release records.
+Review requirements are risk-based.
 
-Agents must use these sources rather than relying exclusively on conversation history.
+### 9.3 Security Review
 
-### 7.2 Durable Context
+Security Engineer assesses:
 
-Information required across sessions should be stored in project documentation or structured project artifacts.
+- Threats and attack surfaces.
+- Authentication and authorization.
+- Sensitive data handling.
+- Dependency and supply-chain risks.
+- Security configuration.
+- Security architecture.
+- Relevant security testing.
 
-Temporary runtime context must not be treated as the only record of important project decisions.
+### 9.4 Quality Assurance
 
-### 7.3 Project Isolation
+QA Engineer validates requirements and behavior at component and system levels.
 
-Each project maintains its own:
+Distributed projects should include contract, integration, and end-to-end testing where applicable.
 
-- Repository.
-- Project context.
-- Runtime sessions.
-- Work items.
-- Technical decisions.
-- Deliverables.
-- Project-specific configuration.
-
-Cross-project information sharing requires explicit authorization.
-
-## 8. Risk Management and Escalation
-
-### 8.1 Risk Classification
-
-Engineering activities should be classified according to:
-
-- Potential impact.
-- Reversibility.
-- Data sensitivity.
-- Security implications.
-- Operational consequences.
-- Business consequences.
-
-The classification determines required reviews and approvals.
-
-### 8.2 Escalation Conditions
+## 10. Risk Management and Escalation
 
 Agents must escalate when:
 
-- Requirements are materially ambiguous or conflicting.
-- Required information is unavailable.
-- A task exceeds assigned permissions.
-- A technical decision has significant architectural impact.
-- A Quality Gate cannot be satisfied.
-- An unexpected security or operational risk is discovered.
-- Execution could cause irreversible or high-impact consequences.
+- Requirements are ambiguous or conflicting.
+- A task exceeds the assigned Role's authority.
+- A proposed change affects system boundaries or contracts.
+- Security, privacy, compliance, or operational risks are identified.
+- Required permissions are unavailable.
+- Quality Gates cannot be satisfied.
+- A decision has significant business impact.
 
-### 8.3 Escalation Process
+Human approval is risk-based and must be traceable.
 
-The responsible agent should provide:
+## 11. Multi-Project Operations
 
-- Description of the issue.
-- Relevant context and evidence.
-- Potential impact.
-- Available options.
-- Recommended resolution.
-- Decision or approval required.
+Each project has its own Project Layer and Runtime Layer.
 
-The Engineering Manager routes the issue to the appropriate human authority when necessary.
+Projects may reuse the same Organization Roles, Skills, Capabilities, and workflows.
 
-## 9. Multi-Project Operations
+Project contexts and source code remain isolated by default.
 
-### 9.1 Independent Project Execution
+Separate project sessions and working directories must be used to prevent accidental cross-project changes.
 
-Multiple projects may operate concurrently under the same AIEO organization.
+The Organization Layer does not automatically grant an Agent access to other projects.
 
-Each project has its own Engineering Manager Agent context and project-specific execution environment.
+## 12. Operating with Claude Code
 
-Projects share approved organization-wide capabilities but do not share runtime context by default.
+Claude Code is an execution environment for AIEO Agents.
 
-### 9.2 Shared Organization Capabilities
+AIEO defines reusable Role instructions, Skills, workflows, and project context.
 
-The following capabilities may be reused across projects:
+The project must explicitly configure the applicable AIEO version and project-specific context.
 
-- Agent definitions.
-- Engineering standards.
-- Skills.
-- Workflows.
-- Quality policies.
-- Approved tools and integrations.
+Organization capabilities must be distributed through an explicit mechanism such as templates, synchronization, or a versioned plugin.
 
-Shared capabilities are distributed through versioned releases.
+A project must not rely on implicit inheritance of files or configuration from another repository.
 
-### 9.3 Project Version Management
+## 13. Organization Versioning and Project Adoption
+
+Organization releases are versioned.
 
 Each project records its selected AIEO version.
 
-New projects should adopt the latest approved stable version by default.
+New projects default to the latest approved stable release.
 
-Existing projects may:
+Existing projects remain on their pinned version unless they voluntarily upgrade or a mandatory risk review requires action.
 
-- Keep their current version.
-- Evaluate a newer release.
-- Upgrade after compatibility and impact assessment.
+Upgrade assessments must consider:
 
-Upgrades must be explicit and traceable.
+- Compatibility.
+- Breaking changes.
+- Updated Role definitions.
+- Updated Skills and Capabilities.
+- Workflow changes.
+- Migration effort.
+- Security and operational impact.
 
-### 9.4 Resource and Execution Management
+## 14. Continuous Improvement
 
-The Engineering Manager of each project coordinates its own workload.
+Project feedback may identify opportunities to improve:
 
-When multiple projects execute concurrently, the human organization owner may monitor:
+- Roles and responsibilities.
+- Skills and Capabilities.
+- Agent instructions.
+- Workflows.
+- Quality Gates.
+- Engineering standards.
 
-- Overall project status.
-- Resource and usage consumption.
-- Delivery priorities.
-- Shared infrastructure constraints.
-- Organization-wide risks.
+Proposals are reviewed by Organization governance before becoming reusable Organization capabilities.
 
-No project should assume exclusive access to shared resources unless explicitly allocated.
-
-### 9.5 Cross-Project Coordination
-
-Cross-project coordination is required when:
-
-- Projects share a component or service.
-- Projects depend on common APIs.
-- Changes affect shared infrastructure.
-- Organization-wide standards require coordinated adoption.
-
-Cross-project coordination must be explicitly authorized and documented.
-
-## 10. Operating with Claude Code
-
-Claude Code is the initial execution platform for AIEO.
-
-The operating model will be implemented using its capabilities where appropriate:
-
-- Project instructions for project context and conventions.
-- Subagents for specialized engineering roles.
-- Skills for reusable engineering workflows.
-- Agent Teams for coordinated parallel execution where appropriate.
-- Hooks for deterministic workflow automation.
-- MCP for external tools and system integrations.
-- Plugins for reusable and versioned distribution.
-
-The exact implementation mechanism may evolve as AIEO matures.
-
-The organization operating principles remain independent of a specific tool implementation.
-
-## 11. Continuous Improvement
-
-AIEO should evaluate its operating effectiveness through real project outcomes.
-
-Evaluation areas include:
-
-- Task completion and acceptance rates.
-- Defect and rework rates.
-- Quality Gate effectiveness.
-- Agent execution cost.
-- Human intervention frequency.
-- Delivery predictability.
-- Workflow bottlenecks.
-- Reuse of shared capabilities.
-
-Lessons learned should be reviewed before modifying organization-wide standards or workflows.
-
-Approved improvements must be versioned and distributed through the organization release process.
-
-## 12. Operating Model Evolution
-
-The initial operating model prioritizes:
-
-1. Clear project leadership through Engineering Manager.
-2. A small set of well-defined specialist roles.
-3. Clear ownership of business priorities and technical decisions.
-4. Repeatable engineering workflows.
-5. Reliable deliverable and quality management.
-6. Project isolation.
-7. Version-controlled organization capabilities.
-8. Measurable execution outcomes.
-
-More advanced orchestration and automation should be introduced incrementally based on pilot project experience.
+Project-specific workarounds must not silently become Organization standards.
 
 ---
 
