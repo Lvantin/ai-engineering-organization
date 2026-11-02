@@ -1,0 +1,23 @@
+# Application / Service Profile
+
+- Component ID:
+- Name:
+- Type:
+- Purpose and responsibilities:
+- Repository / source location:
+- Owning Role/team:
+- Technology stack and versions:
+- Runtime:
+- Data owned:
+- APIs/events provided:
+- APIs/events consumed:
+- Dependencies:
+- Build instructions:
+- Test instructions:
+- Deployment target:
+- Configuration references (no secret values):
+- Observability:
+- Security considerations:
+- Operational runbook:
+- Status:
+- Last reviewed:

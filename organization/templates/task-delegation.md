@@ -1,0 +1,21 @@
+# Task Delegation
+
+- Task ID:
+- Parent Feature / User Story:
+- Assigned Role:
+- Agent Definition version:
+- Objective:
+- Background:
+- In scope:
+- Out of scope:
+- Relevant context references:
+- Target application/service:
+- Technology context:
+- Dependencies:
+- Constraints:
+- Permissions:
+- Expected deliverables:
+- Acceptance criteria:
+- Verification commands/procedures:
+- Applicable Quality Gates:
+- Escalation route:

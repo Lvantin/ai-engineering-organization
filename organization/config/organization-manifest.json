@@ -1,0 +1,57 @@
+{
+  "schemaVersion": "1.0",
+  "organization": {
+    "id": "AIEO",
+    "name": "AI Engineering Organization",
+    "status": "released",
+    "version": "1.0.0",
+    "defaultLocale": "en"
+  },
+  "foundationalDocuments": [
+    "organization/vision.md",
+    "organization/operating-model.md",
+    "organization/roles-and-responsibilities.md"
+  ],
+  "roles": [
+    "engineering-manager",
+    "product-manager",
+    "solution-architect",
+    "ui-ux-designer",
+    "backend-engineer",
+    "frontend-engineer",
+    "mobile-engineer",
+    "cms-website-engineer",
+    "qa-engineer",
+    "code-reviewer",
+    "security-engineer",
+    "devops-engineer"
+  ],
+  "documentGroups": [
+    "agents",
+    "protocols",
+    "standards",
+    "skills",
+    "workflows",
+    "templates",
+    "quality",
+    "integrations",
+    "config",
+    "versions"
+  ],
+  "governance": {
+    "humanApprovalRequiredFor": [
+      "uat-acceptance",
+      "go-live-authorization",
+      "material-risk-acceptance",
+      "organization-policy-approval"
+    ],
+    "projectVersionAdoption": "pinned-until-explicit-upgrade"
+  },
+  "release": {
+    "status": "released",
+    "releaseDate": "2026-11-02",
+    "packageScope": "organization-layer-companion-package",
+    "foundationalDocumentsRequired": true,
+    "runtimeAdapterImplementationStatus": "design-only-not-validated"
+  }
+}

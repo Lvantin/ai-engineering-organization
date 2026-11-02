@@ -1,0 +1,65 @@
+{
+  "schemaVersion": "1.0",
+  "roles": [
+    {
+      "id": "engineering-manager",
+      "definition": "organization/agents/engineering-manager.md",
+      "status": "approved"
+    },
+    {
+      "id": "product-manager",
+      "definition": "organization/agents/product-manager.md",
+      "status": "approved"
+    },
+    {
+      "id": "solution-architect",
+      "definition": "organization/agents/solution-architect.md",
+      "status": "approved"
+    },
+    {
+      "id": "ui-ux-designer",
+      "definition": "organization/agents/ui-ux-designer.md",
+      "status": "approved"
+    },
+    {
+      "id": "backend-engineer",
+      "definition": "organization/agents/backend-engineer.md",
+      "status": "approved"
+    },
+    {
+      "id": "frontend-engineer",
+      "definition": "organization/agents/frontend-engineer.md",
+      "status": "approved"
+    },
+    {
+      "id": "mobile-engineer",
+      "definition": "organization/agents/mobile-engineer.md",
+      "status": "approved"
+    },
+    {
+      "id": "cms-website-engineer",
+      "definition": "organization/agents/cms-website-engineer.md",
+      "status": "approved"
+    },
+    {
+      "id": "qa-engineer",
+      "definition": "organization/agents/qa-engineer.md",
+      "status": "approved"
+    },
+    {
+      "id": "code-reviewer",
+      "definition": "organization/agents/code-reviewer.md",
+      "status": "approved"
+    },
+    {
+      "id": "security-engineer",
+      "definition": "organization/agents/security-engineer.md",
+      "status": "approved"
+    },
+    {
+      "id": "devops-engineer",
+      "definition": "organization/agents/devops-engineer.md",
+      "status": "approved"
+    }
+  ]
+}
