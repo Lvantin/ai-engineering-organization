@@ -1,7 +1,7 @@
 # AI Engineering Organization (AIEO) — Vision
 
 **Version:** 1.1.0  
-**Status:** Draft  
+**Status:** Approval Baseline  
 **Last Updated:** 2026-11-02
 
 ## 1. Vision
